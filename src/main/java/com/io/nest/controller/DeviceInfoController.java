@@ -61,7 +61,11 @@ public class DeviceInfoController {
 	}
 	
 	
-	
+	//get detailed list of clusters
+	@GetMapping("/detaileddevices")
+	public  ResponseEntity<?> getDevicesList() throws ClusterNotFoundException, DeviceNotFoundException {
+		return new ResponseEntity<>(deviceInfoSerice.getDevicesList(),HttpStatus.OK);
+	}
 	
 	
 
