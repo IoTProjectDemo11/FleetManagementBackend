@@ -17,6 +17,7 @@ public interface DeviceInfoService {
 	public int getIssueDevices() throws DeviceNotFoundException;
 
 	public Object getDevices() throws DeviceNotFoundException;
+	public Object getDevicesList() throws DeviceNotFoundException;
 
 	
 }
