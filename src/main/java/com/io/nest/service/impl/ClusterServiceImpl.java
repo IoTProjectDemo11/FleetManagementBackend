@@ -85,4 +85,15 @@ public class ClusterServiceImpl implements ClusterService{
 		}
 		return l;
 	}
+	
+	@Override
+	public List<DeviceDetail> getDeviceDetail(String cId) {
+		int size =5;
+		int page =5;
+		Pageable pagable = PageRequest.of(page,size);
+		Cluster c= clusterRepository.getClusterById(cId);
+		
+		List<DeviceDetail> d = c.getDeviceDetail();
+		return d;
+	}
 }
