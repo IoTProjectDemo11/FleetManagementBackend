@@ -55,5 +55,11 @@ public class ClusterController {
 		return new ResponseEntity<>(clusterSerice.getDevicesCorrespongClusterId(cId),HttpStatus.OK);
 	} 
 	
+	//get the devicedetail corresponding to cluster id(search)
+	@GetMapping("/devicedetail/{clusterid}")
+	public  ResponseEntity<?> getDeviceDetail(@PathVariable(value ="clusterid") String cId) throws ClusterNotFoundException {
+		return new ResponseEntity<>(clusterSerice.getDeviceDetail(cId),HttpStatus.OK);
+	} 
+	
 	
 }
