@@ -15,6 +15,7 @@ public interface ClusterService {
 	public Object getCluster() throws ClusterNotFoundException;
 
 	public Object getDevicesCorrespongClusterId(String cId) throws ClusterNotFoundException;
+	public List<DeviceDetail> getDeviceDetail(String cId);
 
 
 }
