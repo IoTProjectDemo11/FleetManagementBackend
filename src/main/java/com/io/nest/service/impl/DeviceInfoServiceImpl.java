@@ -83,6 +83,18 @@ public class DeviceInfoServiceImpl implements DeviceInfoService {
 		}
 		return s;
 	}
+	
+	@Override
+	public Object getDevicesList() throws DeviceNotFoundException {
+		List<DeviceDetail> dd = deviceRepository.findAll();
+//		List<Long> s = new ArrayList<>();
+//		int i =0;
+//		for(DeviceDetail d: dd) {
+//			s.add
+//		}
+		return dd;
+	}
+
 
 	
 }
